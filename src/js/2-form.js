@@ -33,7 +33,7 @@ form.addEventListener('submit', event => {
   event.preventDefault();
 
   if (formData.email === '' || formData.message === '') {
-    alert('Plese fill out the form');
+    alert('Please fill out the form');
     return;
   }
 
@@ -41,8 +41,8 @@ form.addEventListener('submit', event => {
 
   localStorage.removeItem(STORAGE_KEY);
 
-  form.requestFullscreen();
-
   formData.email = '';
   formData.message = '';
+
+  form.reset();
 });

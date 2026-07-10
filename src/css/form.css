@@ -25,6 +25,12 @@
   border-radius: 4px;
   width: 360px;
   height: 40px;
+  outline: none;
+}
+
+.input-email-form:hover,
+.input-email-form:focus {
+  border-color: #000;
 }
 
 .textarea-message-form {
@@ -33,6 +39,8 @@
   width: 360px;
   height: 80px;
   margin-bottom: 8px;
+  resize: none;
+  outline: none;
 }
 
 .textarea-message-form:hover,
@@ -40,12 +48,19 @@
   border-color: #000;
 }
 
-.contacts-textarea::placeholder {
+.textarea-message-form::placeholder {
+  opacity: 0;
   font-family: 'Mulish', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.6);
+}
+
+.textarea-message-form:hover::placeholder,
+.textarea-message-form:focus::placeholder,
+.textarea-message-form:active::placeholder {
+  opacity: 1;
 }
 
 .btn-form {
@@ -63,4 +78,9 @@
   height: 40px;
 
   background: #4e75ff;
+}
+
+.btn-form:hover,
+.btn-form:focus {
+  background-color: #6c8cff;
 }
